@@ -1,0 +1,1 @@
+https://api.bscscan.com/api?module=stats&action=tokensupply&contractaddress=0x2d665Dd2fF960fE074D2BaB621Bc7f6cbce8b57D
