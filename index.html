@@ -69,19 +69,43 @@
     <div style="flex: 1; min-width: 200px;">
       <div style="font-size: 40px; color: orange;">📦</div>
       <h3 style="margin: 10px 0;">Total Supply</h3>
-      <p style="font-size: 24px; color: #ff3c00;">100,000,000 MARS</p>
+      <p id="total-supply" style="font-size: 24px; color: #ffae42;">0 MARS</p>
     </div>
 
     <!-- Circulating Supply -->
     <div style="flex: 1; min-width: 200px;">
       <div style="font-size: 40px; color: orange;">🔄</div>
       <h3 style="margin: 10px 0;">Circulating Supply</h3>
-      <p style="font-size: 24px; color: #ff3c00;">125 MARS</p>
+      <p id="circulating-supply" style="font-size: 24px; color: #ffae42;">0 MARS</p>
     </div>
 
   </div>
 </section>
 
+<!-- Number Count Animation Script -->
+<script>
+function animateCount(id, endValue, duration) {
+  const el = document.getElementById(id);
+  let start = 0;
+  const increment = endValue / (duration / 16); // ~60fps
+  const step = () => {
+    start += increment;
+    if (start < endValue) {
+      el.textContent = Math.floor(start).toLocaleString() + " MARS";
+      requestAnimationFrame(step);
+    } else {
+      el.textContent = endValue.toLocaleString() + " MARS";
+    }
+  };
+  requestAnimationFrame(step);
+}
+
+// Run animation on page load
+window.addEventListener("load", () => {
+  animateCount("total-supply", 100000000, 2000);     // 2 seconds
+  animateCount("circulating-supply", 125, 2000);     // 2 seconds
+});
+</script>
   
   <section class="section">
     <h2>Live Price Chart</h2>
