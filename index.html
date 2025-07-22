@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MARS Coin | Official Token Website</title>
+  <title>NAQD Coin | Official Token Website</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   
   <!-- SEO Metadata -->
-  <link rel="alternate" href="https://marsbsc.com/api/total-supply.html" title="MARS Coin Total Supply" />
-  <link rel="alternate" href="https://marsbsc.com/api/circulating-supply.html" title="MARS Coin Circulating Supply" />
+  <link rel="alternate" href="https://nakd.app/api/total-supply.html" title="NAQD Coin Total Supply" />
+  <link rel="alternate" href="https://nakd.app/api/circulating-supply.html" title="NAQD Coin Circulating Supply" />
 
   <style>
     body {
@@ -56,7 +56,7 @@
 </head>
 <body>
   <header>
-    <h1>MARS Coin</h1>
+    <h1>NAQD Coin</h1>
     <p>The Future of Decentralized Space Finance</p>
     <a class="btn" href="hht" target="_blank">Buy on App</a>
     <a class="btn" href="#whitepaper">Read Whitepaper</a>
@@ -69,14 +69,14 @@
     <div style="flex: 1; min-width: 200px;">
       <div style="font-size: 40px; color: orange;">📦</div>
       <h3 style="margin: 10px 0;">Total Supply</h3>
-      <p id="total-supply" style="font-size: 24px; color: #ffae42;">0 MARS</p>
+      <p id="total-supply" style="font-size: 24px; color: #ffae42;">0 NAQD</p>
     </div>
 
     <!-- Circulating Supply -->
     <div style="flex: 1; min-width: 200px;">
       <div style="font-size: 40px; color: orange;">🔄</div>
       <h3 style="margin: 10px 0;">Circulating Supply</h3>
-      <p id="circulating-supply" style="font-size: 24px; color: #ffae42;">0 MARS</p>
+      <p id="circulating-supply" style="font-size: 24px; color: #ffae42;">0 NAQD</p>
     </div>
 
   </div>
@@ -91,56 +91,54 @@ function animateCount(id, endValue, duration) {
   const step = () => {
     start += increment;
     if (start < endValue) {
-      el.textContent = Math.floor(start).toLocaleString() + " MARS";
+      el.textContent = Math.floor(start).toLocaleString() + " NAQD";
       requestAnimationFrame(step);
     } else {
-      el.textContent = endValue.toLocaleString() + " MARS";
+      el.textContent = endValue.toLocaleString() + " NAQD";
     }
   };
   requestAnimationFrame(step);
 }
 
-// Run animation on page load
 window.addEventListener("load", () => {
-  animateCount("total-supply", 100000000000, 2000);     // 2 seconds
-  animateCount("circulating-supply", 0, 2000);     // 2 seconds
+  animateCount("total-supply", 100000000000, 2000);
+  animateCount("circulating-supply", 0, 2000);
 });
 </script>
   
-  <section class="section">
-    <h2>Live Price Chart</h2>
-    <iframe src="hht/"></iframe>
-  </section>
+<section class="section">
+  <h2>Live Price Chart</h2>
+  <iframe src="hht/"></iframe>
+</section>
 
-  <section class="section">
-    <h2>Join the Community</h2>
-    <p>Connect with MARS Coin holders and get updates:</p>
-    <a class="btn" href="https://x.com/MarsCoin_BSC" target="_blank">Twitter</a>
-  </section>
+<section class="section">
+  <h2>Join the Community</h2>
+  <p>Connect with NAQD Coin holders and get updates:</p>
+  <a class="btn" href="https://x.com/MarsCoin_BSC" target="_blank">Twitter</a>
+</section>
 
 <section class="section" id="contact">
   <h2>Contact Us</h2>
   <p>If you have questions or need support, feel free to reach out:</p>
   <p>
-    📧 <a href="mailto:support@marsbsc.com" style="color: #ff3c00; font-weight: bold;">support@marsbsc.com</a>
+    📧 <a href="mailto:support@nakd.app" style="color: #ff3c00; font-weight: bold;">support@nakd.app</a>
   </p>
 </section>
   
-   <section class="section" id="whitepaper">
-    <h2>Whitepaper</h2>
-    <p>Explore the official MARS Coin whitepaper to learn about our vision, tokenomics, and strategy.</p>
-    <a class="btn" href="Whitepaper.pdf" download>Download Whitepaper</a>
-  </section>
-  
-  <!-- Optional Display of API Links -->
-  <section class="section">
-    <h2>Token Stats</h2>
-    <p><a href="https://marsbsc.com/api/total-supply.html" target="_blank">🔢 Total Supply</a></p>
-    <p><a href="https://marsbsc.com/api/circulating-supply.html" target="_blank">🔄 Circulating Supply</a></p>
-  </section>
+<section class="section" id="whitepaper">
+  <h2>Whitepaper</h2>
+  <p>Explore the official NAQD Coin whitepaper to learn about our vision, tokenomics, and strategy.</p>
+  <a class="btn" href="Whitepaper.pdf" download>Download Whitepaper</a>
+</section>
 
-  <div class="footer">
-    &copy; 2025 MARS Coin. All rights reserved. Contract:
-  </div>
+<section class="section">
+  <h2>Token Stats</h2>
+  <p><a href="https://nakd.app/api/total-supply.html" target="_blank">🔢 Total Supply</a></p>
+  <p><a href="https://nakd.app/api/circulating-supply.html" target="_blank">🔄 Circulating Supply</a></p>
+</section>
+
+<div class="footer">
+  &copy; 2025 NAQD Coin. All rights reserved. Contract: 0xEAD7Dd49f42084204E5b927b933c8605e1e6e2cd
+</div>
 </body>
 </html>
